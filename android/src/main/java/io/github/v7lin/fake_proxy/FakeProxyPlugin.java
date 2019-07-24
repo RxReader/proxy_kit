@@ -1,5 +1,7 @@
 package io.github.v7lin.fake_proxy;
 
+import android.text.TextUtils;
+
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -23,10 +25,11 @@ public class FakeProxyPlugin implements MethodCallHandler {
     @Override
     public void onMethodCall(MethodCall call, Result result) {
         if (METHOD_GETPROXY.equals(call.method)) {
-            if (Boolean.parseBoolean(System.getProperty("http.proxySet"))) {
-                String proxyHost = System.getProperty("http.proxyHost");
-                int proxyPort = Integer.parseInt(System.getProperty("http.proxyPort"));
-                result.success(String.format("%1$s:%2$d", proxyHost, proxyPort));
+            String proxyHost = System.getProperty("http.proxyHost");
+            String proxyPort = System.getProperty("http.proxyPort");
+            if (!TextUtils.isEmpty(proxyHost)
+                    && !TextUtils.isEmpty(proxyPort) && TextUtils.isDigitsOnly(proxyPort) && Integer.parseInt(proxyPort) > -1) {
+                result.success(String.format("%1$s:%2$d", proxyHost, Integer.parseInt(proxyPort)));
             } else {
                 result.success(null);
             }

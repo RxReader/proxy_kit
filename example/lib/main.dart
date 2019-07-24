@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:fake_proxy/fake_proxy.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,8 +16,16 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Fake Proxy'),
         ),
-        body: Center(
-          child: Text('Running on: ${Platform.operatingSystem}\n'),
+        body: ListView(
+          children: <Widget>[
+            ListTile(
+              title: const Text('Proxy'),
+              onTap: () async {
+                String proxy = await Proxy.getProxy();
+                print('proxy: ${proxy ?? ''}');
+              },
+            ),
+          ],
         ),
       ),
     );
