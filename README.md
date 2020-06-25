@@ -1,12 +1,43 @@
-# fake_proxy
+# proxy_kit
 
 [![Build Status](https://cloud.drone.io/api/badges/v7lin/fake_proxy/status.svg)](https://cloud.drone.io/v7lin/fake_proxy)
 [![Codecov](https://codecov.io/gh/v7lin/fake_proxy/branch/master/graph/badge.svg)](https://codecov.io/gh/v7lin/fake_proxy)
 [![GitHub Tag](https://img.shields.io/github/tag/v7lin/fake_proxy.svg)](https://github.com/v7lin/fake_proxy/releases)
-[![Pub Package](https://img.shields.io/pub/v/fake_proxy.svg)](https://pub.dartlang.org/packages/fake_proxy)
+[![Pub Package](https://img.shields.io/pub/v/proxy_kit.svg)](https://pub.dartlang.org/packages/proxy_kit)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/v7lin/fake_proxy/blob/master/LICENSE)
 
 A powerful proxy plugin for Flutter.
+
+## android
+
+```
+# 不需要做任何额外接入工作
+# 不需要混淆
+```
+
+## ios
+
+```
+# 不需要做任何额外接入工作
+```
+
+## flutter
+
+* snapshot
+
+```
+dependencies:
+  proxy_kit:
+    git:
+      url: https://github.com/v7lin/fake_proxy.git
+```
+
+* release
+
+```
+dependencies:
+  proxy_kit: ^${latestTag}
+```
 
 ## Getting Started
 

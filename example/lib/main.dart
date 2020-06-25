@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fake_proxy/fake_proxy.dart';
+import 'package:proxy_kit/proxy_kit.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +14,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Fake Proxy'),
+          title: const Text('Proxy Kit'),
         ),
         body: ListView(
           children: <Widget>[

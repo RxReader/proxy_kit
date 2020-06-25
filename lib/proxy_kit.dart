@@ -1,3 +1,3 @@
-library fake_proxy;
+library proxy_kit;
 
 export 'src/proxy.dart';

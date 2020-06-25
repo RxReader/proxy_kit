@@ -1,6 +1,6 @@
-# fake_proxy_example
+# proxy_kit_example
 
-Demonstrates how to use the fake_proxy plugin.
+Demonstrates how to use the proxy_kit plugin.
 
 ## Getting Started
 
