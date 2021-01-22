@@ -21,7 +21,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
+  test('getProxy', () async {
     expect(await Proxy.getProxy(), null);
   });
 }
