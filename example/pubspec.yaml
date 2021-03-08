@@ -1,6 +1,6 @@
 name: proxy_kit_example
 description: Demonstrates how to use the proxy_kit plugin.
-version: 1.0.0+1000
+version: 1.0.0+100
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
