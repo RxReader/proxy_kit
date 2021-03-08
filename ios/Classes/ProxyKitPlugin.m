@@ -9,10 +9,8 @@
     [registrar addMethodCallDelegate:instance channel:channel];
 }
 
-static NSString *const METHOD_GETPROXY = @"getProxy";
-
 - (void)handleMethodCall:(FlutterMethodCall *)call result:(FlutterResult)result {
-    if ([METHOD_GETPROXY isEqualToString:call.method]) {
+    if ([@"getProxy" isEqualToString:call.method]) {
         CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
         NSDictionary *dictProxy = (__bridge_transfer id)proxySettings;
         //是否开启了http代理
