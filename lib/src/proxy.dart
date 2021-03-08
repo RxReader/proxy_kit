@@ -8,7 +8,7 @@ class Proxy {
 
   static const String _METHOD_GETPROXY = 'getProxy';
 
-  static Future<String> getProxy() {
+  static Future<String?> getProxy() {
     return _channel.invokeMethod<String>(_METHOD_GETPROXY);
   }
 }

@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
             ListTile(
               title: const Text('Proxy'),
               onTap: () async {
-                String proxy = await Proxy.getProxy();
+                final String? proxy = await Proxy.getProxy();
                 print('proxy: ${proxy ?? ''}');
               },
             ),
