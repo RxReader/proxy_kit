@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
         body: ListView(
           children: <Widget>[
             ListTile(
-              title: const Text('Proxy'),
+              title: const Text('getProxy'),
               onTap: () async {
                 final String? proxy = await Proxy.getProxy();
                 print('proxy: ${proxy ?? ''}');
